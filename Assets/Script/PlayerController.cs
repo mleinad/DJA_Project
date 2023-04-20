@@ -87,6 +87,8 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * currentSpeed + Vector3.up * velocityY;
         //Debug.Log(currentSpeed);
         controller.Move(velocity * Time.deltaTime);
+
+        //boozler was here :P
     }
 
 
