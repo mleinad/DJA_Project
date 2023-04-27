@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Transform playerCamera = null;
     [SerializeField] float mouseSensitivity = 3.5f;
     [SerializeField] bool lockCursor = true;
-    [SerializeField] float walkSpeed= 6.0f;
+    [SerializeField] float walkSpeed = 6.0f;
     [SerializeField] float gravity = -13.0f;
-    [SerializeField][Range(0.0f, 0.5f)] float moveSmoothTime= 0.3f;
+    [SerializeField][Range(0.0f, 0.5f)] float moveSmoothTime = 0.3f;
     [SerializeField][Range(0.0f, 0.5f)] float mouseSmoothTime = 0.3f;
     [SerializeField] float jumpForce = 5.0f;
     [SerializeField] float sprintSpeed = 10.0f;
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
         playerCamera.localEulerAngles = Vector3.right * cameraPitch;
 
-        transform.Rotate(Vector3.up* currentMouseDelta.x * mouseSensitivity);
+        transform.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
     }
 
     void UpdateMovement()
@@ -82,13 +83,12 @@ public class PlayerController : MonoBehaviour
 
         velocityY += gravity * Time.deltaTime;
 
-        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, acceleration*Time.deltaTime);    
+        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
 
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * currentSpeed + Vector3.up * velocityY;
         //Debug.Log(currentSpeed);
         controller.Move(velocity * Time.deltaTime);
 
-        //boozler was here :P
     }
 
 

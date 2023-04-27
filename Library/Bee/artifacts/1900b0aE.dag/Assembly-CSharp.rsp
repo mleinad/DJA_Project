@@ -349,7 +349,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Script/Aiming.cs"
+"Assets/Script/HitDynamic.cs"
 "Assets/Script/PlayerController.cs"
+"Assets/Script/WeaponClass.cs"
 -langversion:9.0
 
 /deterministic

@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Script\Aiming.cs" />
+    <Compile Include="Assets\Script\HitDynamic.cs" />
+    <Compile Include="Assets\Script\WeaponClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
